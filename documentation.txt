@@ -1,0 +1,32 @@
+==================================================
+Project Documentation & Technical Report
+Project Name: Automated Vulnerability Scanner & Report Generator
+Developer: Basil Al-Qatawneh
+==================================================
+
+1. Project Overview:
+The "Automated Vulnerability Scanner & Report Generator" is an advanced Python-based security utility designed to automate initial vulnerability assessments for web applications and servers. It specifically scans for missing security headers, analyzes HTTP responses, and generates structured text reports.
+
+2. Tech Stack & Tools:
+- Language: Python 3.x
+- Development Environment: Visual Studio Code (VS Code)
+- Version Control: Git & GitHub
+- Core Libraries:
+  * requests: For handling HTTP requests and fetching security headers.
+  * datetime: For generating automated timestamps on generated reports.
+
+3. Challenges & Solutions:
+- Challenge 1 (Handling Server Timeouts): Unresponsive or slow servers could cause the script to hang.
+  * Solution: Implemented robust exception handling (try-except) along with a strict request timeout threshold (timeout=5 seconds) to ensure stability.
+- Challenge 2 (URL Normalization): Users inputting URLs without the protocol prefix caused connection errors.
+  * Solution: Added automatic prefix checking to prepend 'https://' if missing.
+
+4. Security Focus & Headers Analyzed:
+The scanner inspects critical HTTP security misconfigurations, focusing on:
+- Strict-Transport-Security (HSTS)
+- Content-Security-Policy (CSP)
+- X-Frame-Options (Clickjacking protection)
+- X-Content-Type-Options
+
+5. Workflow & Report Generation:
+The tool evaluates headers against security standards, categorizes findings into SECURE or VULNERABLE states, and automatically saves a clean timestamped report to 'security_scan_report.txt'.
