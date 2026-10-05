@@ -1,0 +1,25 @@
+==================================================
+PROJECT DOCUMENTATION: SANAD VOICE ASSISTANT (مشروع سند)
+==================================================
+
+1. INTRODUCTION & OBJECTIVE:
+- Sanad is a prototype web application designed to bridge the digital divide for elderly and illiterate citizens in Jordan.
+- It translates natural spoken Jordanian dialect into structured backend intents to execute government service requests effortlessly.
+
+2. SYSTEM ARCHITECTURE:
+- Frontend: Single-page responsive web layout featuring large touch targets, clear typography, and JavaScript event handlers for simulated voice inputs.
+- Backend: Flask server routing HTTP POST requests, parsing intent keywords (e.g., "هوية", "أجدد"), and responding with automated Arabic confirmation messages.
+
+3. WORKFLOW:
+- User clicks the voice interaction button on the web interface.
+- JavaScript triggers an asynchronous fetch request (/process_request) carrying the speech text.
+- The Flask backend analyzes the text payload, matches patterns, and returns the appropriate service response (e.g., Civil Status appointment booking details).
+
+4. TECH STACK:
+- Backend: Python, Flask Framework
+- Frontend: HTML5, CSS3, JavaScript (Fetch API)
+- Version Control: Git & GitHub
+
+5. FUTURE ENHANCEMENTS:
+- Integrating real Speech-to-Text (STT) and Text-to-Speech (TTS) models trained on Jordanian Arabic dialects.
+- Connecting securely with official government APIs for live transactions.
